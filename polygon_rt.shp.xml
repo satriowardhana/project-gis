@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en"><Esri><CreaDate>20260105</CreaDate><CreaTime>22213400</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files (x86)\arcgis\desktop10.8\ArcToolbox\Toolboxes\Analysis Tools.tbx\CreateThiessenPolygons" Date="20260105" Time="222134">CreateThiessenPolygons titik_rt "D:\Project SIG\polygon_rt.shp" ONLY_FID</Process></lineage></DataProperties></Esri></metadata>

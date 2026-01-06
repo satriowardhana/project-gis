@@ -1,0 +1,133 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": 0,
+        "kecamatan": "Lima Puluh",
+        "kelurahan": "Sekip",
+        "rt": 2,
+        "rw": 5,
+        "skor": 0,
+        "kategori": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.459313, 0.526182]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": 1,
+        "kecamatan": "Lima Puluh",
+        "kelurahan": "Sekip",
+        "rt": 3,
+        "rw": 5,
+        "skor": 0,
+        "kategori": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.460486, 0.526229]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": 2,
+        "kecamatan": "Lima Puluh",
+        "kelurahan": "Sekip",
+        "rt": 4,
+        "rw": 5,
+        "skor": 0,
+        "kategori": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.460881, 0.526268]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": 3,
+        "kecamatan": "Bukit Raya",
+        "kelurahan": "Air Dingin",
+        "rt": 6,
+        "rw": 4,
+        "skor": 0,
+        "kategori": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.4595495, 0.4481395]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": 4,
+        "kecamatan": "Tenayan Raya",
+        "kelurahan": "Rejosari",
+        "rt": 2,
+        "rw": 13,
+        "skor": 0,
+        "kategori": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.4829424, 0.5347977]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": 5,
+        "kecamatan": "Tenayan Raya",
+        "kelurahan": "Rejosari",
+        "rt": 1,
+        "rw": 13,
+        "skor": 0,
+        "kategori": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.4814934, 0.5316293]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": 6,
+        "kecamatan": "Binawidya",
+        "kelurahan": "Binawidya",
+        "rt": 1,
+        "rw": 5,
+        "skor": 0,
+        "kategori": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.3635099, 0.4906222]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": 7,
+        "kecamatan": "Binawidya",
+        "kelurahan": "Binawidya",
+        "rt": 3,
+        "rw": 5,
+        "skor": 0,
+        "kategori": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [101.3645992, 0.4913376]
+      }
+    }
+  ]
+}
