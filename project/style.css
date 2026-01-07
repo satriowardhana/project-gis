@@ -1,187 +1,204 @@
-/* Reset Dasar */
+/* RESET & FONT */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
-  overflow: hidden; /* Biar ga ada scrollbar double */
+  overflow: hidden;
+  background: #f3f4f6;
 }
 
-/* ===============================
-   LANDING PAGE (Tampilan Awal)
-================================ */
+/* LANDING PAGE */
 #landing {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: url("https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=1920") center/cover no-repeat;
+  /* Gradasi Hijau Eco & Background Lingkungan Bersih */
+  background: linear-gradient(
+      135deg,
+      rgba(16, 185, 129, 0.85),
+      rgba(4, 120, 87, 0.9)
+    ),
+    url("https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1920&q=80")
+      center/cover no-repeat;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #fff;
   text-align: center;
 }
 
-/* Lapisan Gelap di atas Gambar */
-.landing-overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.9), rgba(6, 78, 59, 0.9));
-  z-index: 1;
-}
-
-.landing-box {
+.landing-container {
   position: relative;
   z-index: 2;
-  color: #fff;
-  padding: 40px;
-  max-width: 700px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.2);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  max-width: 1100px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   animation: fadeIn 1s ease-out;
 }
 
-.badge-title {
+.landing-header .badge-title {
   background: #fcd34d;
   color: #064e3b;
   display: inline-block;
-  padding: 5px 15px;
+  padding: 6px 20px;
   border-radius: 50px;
   font-weight: 700;
-  font-size: 0.8rem;
-  margin-bottom: 20px;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
   letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
-.landing-box h1 {
-  font-size: 2.5rem;
+.landing-header h1 {
+  font-size: 3.2rem;
+  margin-bottom: 10px;
   font-weight: 700;
-  margin-bottom: 5px;
-  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
-
-.landing-box h2 {
-  font-size: 1.5rem;
-  font-weight: 300;
+.landing-header h2 {
+  font-size: 1.6rem;
   margin-bottom: 20px;
+  font-weight: 400;
   color: #d1fae5;
 }
 
-.landing-box p {
-  font-size: 1rem;
-  margin-bottom: 30px;
-  line-height: 1.6;
-  color: #ecfdf5;
+/* Cards Glassmorphism */
+.landing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
-
-#btnMap {
-  background: #ffffff;
-  color: #059669;
-  border: none;
-  padding: 15px 40px;
-  font-size: 1rem;
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 25px;
+  width: 300px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.25);
+}
+.card h3 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
   font-weight: 600;
-  border-radius: 30px;
+  color: #fcd34d;
+}
+.card p,
+.card ul {
+  font-size: 0.9rem;
+  color: #ecfdf5;
+  line-height: 1.6;
+}
+.card ul {
+  padding-left: 18px;
+  text-align: left;
+}
+
+/* Buttons */
+#btnMap {
+  background: #fcd34d;
+  color: #064e3b;
+  border: none;
+  padding: 18px 60px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50px;
   cursor: pointer;
-  transition: all 0.3s;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
-
 #btnMap:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-  background: #f0fdf4;
+  background: #fbbf24;
+  transform: scale(1.05);
 }
 
-/* ===============================
-   MAP & SIDEBAR
-================================ */
+/* MAP PAGE */
 #map-container {
-  display: none; /* Logic JS akan mengubah ini jadi Flex */
+  display: none;
   height: 100vh;
   width: 100%;
 }
-
 #sidebar {
-  width: 300px;
-  background: #ffffff;
+  width: 320px;
+  background: #fff;
   padding: 25px;
   display: flex;
   flex-direction: column;
-  box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  border-right: 1px solid #e5e7eb;
 }
-
-.sidebar-header {
-  margin-bottom: 25px;
-  border-bottom: 2px solid #f3f4f6;
-  padding-bottom: 15px;
-}
-
-.sidebar-header h3 {
-  color: #1f2937;
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-}
-
-.sidebar-header small {
-  color: #6b7280;
-}
-
-/* Styling Checkbox yang Rapih tapi Aman */
 .filter-box {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
+  margin: 20px 0;
 }
-
 .custom-check {
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 10px;
-  border-radius: 8px;
-  transition: background 0.2s;
-  font-size: 0.95rem;
-  color: #374151;
-}
-
-.custom-check:hover {
+  padding: 12px;
   background: #f9fafb;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  transition: 0.2s;
 }
-
-/* Style Input Checkbox Asli */
+.custom-check:hover {
+  background: #ecfdf5;
+  border-color: #10b981;
+}
 .custom-check input {
+  margin-right: 12px;
   width: 18px;
   height: 18px;
-  margin-right: 12px;
-  accent-color: #10b981; /* Warna hijau modern */
+  accent-color: #10b981;
+}
+
+#btnBack {
+  background: #fcd34d;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
   cursor: pointer;
-}
-
-.sidebar-footer {
+  font-weight: 600;
   margin-top: auto;
-  text-align: center;
-  font-size: 0.8rem;
-  color: #9ca3af;
-  padding-top: 20px;
 }
-
 #map {
   flex: 1;
   height: 100%;
   z-index: 1;
 }
 
-/* Animasi Masuk */
+.landing-footer,
+.sidebar-footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-top: 15px;
+}
+
+/* Animation */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

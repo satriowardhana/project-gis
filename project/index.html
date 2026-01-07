@@ -1,74 +1,104 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebGIS Kebersihan RT/RW Pekanbaru</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebGIS Kebersihan RT/RW Pekanbaru</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- ===================== LANDING / HOME PAGE ===================== -->
+  <div id="landing">
+    <div class="landing-overlay"></div>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    
-    <div id="landing">
-      <div class="landing-overlay"></div> <div class="landing-box">
-        <div class="badge-title">PROJECT SIG KELOMPOK 6</div>
-        <h1>Sistem Informasi Geografis</h1>
-        <h2>Pemetaan Kebersihan Lingkungan</h2>
-        <p>
-          WebGIS ini menampilkan pemetaan RT/RW, fasilitas TPS, serta wilayah
-          survei kebersihan lingkungan Kota Pekanbaru
-        </p>
+    <div class="landing-container">
+      <header class="landing-header">
+        <div class="badge-title">PROJECT SIG KELOMPOK 3</div>
+        <h1>WebGIS Kebersihan Lingkungan</h1>
+        <h2>Kota Pekanbaru</h2>
+      </header>
+
+      <div class="landing-cards">
+        <div class="card">
+          <h3>Profil WebGIS</h3>
+          <p>Menampilkan pemetaan RT/RW, lokasi TPS, dan skor kebersihan tiap kecamatan secara interaktif dan visual.</p>
+        </div>
+        <div class="card">
+          <h3>Tujuan</h3>
+          <p>Meningkatkan kesadaran masyarakat dan membantu pemerintah dalam perencanaan kebersihan kota.</p>
+        </div>
+        <div class="card">
+          <h3>Pengelolaan Sampah</h3>
+          <ul>
+            <li>Pisahkan sampah organik & non-organik</li>
+            <li>Daur ulang sampah non-organik</li>
+            <li>Buat kompos dari sampah organik</li>
+            <li>Kurangi plastik sekali pakai</li>
+            <li>Hindari pembakaran sampah</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="landing-cta">
         <button id="btnMap">Buka Peta Digital</button>
       </div>
     </div>
 
-    <div id="map-container">
-      <div id="sidebar">
-        <div class="sidebar-header">
-          <h3>Layer Kontrol</h3>
-          <small>Filter data peta di bawah ini:</small>
-        </div>
+    <div class="landing-footer">
+      <p>&copy; 2026 SIG Pekanbaru | Kelompok 3</p>
+    </div>
+  </div>
 
-        <div class="filter-box">
-          <label class="custom-check">
-            <input type="checkbox" id="chkRTRW" checked />
-            <span class="checkmark"></span>
-            Titik RT / RW
-          </label>
-
-          <label class="custom-check">
-            <input type="checkbox" id="chkSurvey" />
-            <span class="checkmark"></span>
-            Kecamatan Survei
-          </label>
-
-          <label class="custom-check">
-            <input type="checkbox" id="chkTPS" />
-            <span class="checkmark"></span>
-            Lokasi TPS
-          </label>
-
-          <label class="custom-check">
-            <input type="checkbox" id="chkSkor" />
-            <span class="checkmark"></span>
-            Skor Kebersihan Kecamatan
-          </label>
-        </div>
-        
-        <div class="sidebar-footer">
-          <p>&copy; 2026 SIG Pekanbaru</p>
-        </div>
+  <!-- ===================== MAP CONTAINER ===================== -->
+  <div id="map-container">
+    <div id="sidebar">
+      <div class="sidebar-header">
+        <h3>Layer Kontrol</h3>
+        <small>Filter data peta di bawah ini:</small>
       </div>
 
-      <div id="map"></div>
+      <div class="filter-box">
+        <label class="custom-check">
+          <input type="checkbox" id="chkRTRW" checked />
+          <span class="checkmark"></span>
+          Titik RT / RW
+        </label>
+
+        <label class="custom-check">
+          <input type="checkbox" id="chkSurvey" />
+          <span class="checkmark"></span>
+          Kecamatan Survei
+        </label>
+
+        <label class="custom-check">
+          <input type="checkbox" id="chkTPS" />
+          <span class="checkmark"></span>
+          Lokasi TPS
+        </label>
+
+        <label class="custom-check">
+          <input type="checkbox" id="chkSkor" />
+          <span class="checkmark"></span>
+          Skor Kebersihan Kecamatan
+        </label>
+      </div>
+
+      <button id="btnBack">Kembali ke Home</button>
+
+      <div class="sidebar-footer">
+        <p>&copy; 2026 SIG Pekanbaru</p>
+      </div>
     </div>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <div id="map"></div>
+  </div>
 
-    <script src="main.js"></script>
-  </body>
+  <!-- ===================== SCRIPTS ===================== -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="main.js"></script>
+</body>
 </html>
